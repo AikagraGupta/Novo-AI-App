@@ -22,9 +22,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Novo AI | Insurance Intelligence, Designed for Clarity",
+  title: "Novo AI | Provider Fraud Detection and Claims Integrity",
   description:
-    "A cinematic premium landing page concept for Novo AI, built around scroll-scrubbed insurance intelligence storytelling."
+    "Novo AI helps health insurers detect provider fraud earlier, reduce claims leakage, and turn fragmented claim documents into provider intelligence."
 };
 
 export default function RootLayout({

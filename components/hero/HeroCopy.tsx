@@ -22,10 +22,10 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
 
   return (
     <div className="absolute inset-0 z-20">
-      <div className="section-shell pointer-events-none grid h-full items-end pb-14 pt-28 sm:pb-18 sm:pt-32 lg:grid-cols-[minmax(0,33rem)_1fr] lg:items-center lg:pb-20 lg:pt-32">
+      <div className="section-shell pointer-events-none grid h-full items-center pb-8 pt-24 sm:pb-10 sm:pt-28 lg:grid-cols-[minmax(0,32rem)_1fr] lg:pb-12 lg:pt-28">
         <motion.div
           style={{ y: copyY, opacity: copyOpacity }}
-          className="pointer-events-auto max-w-[33rem]"
+          className="hero-copy-frame pointer-events-auto max-w-[32rem]"
         >
           <motion.p
             initial={{ opacity: 0, y: 18 }}
@@ -41,7 +41,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: sequenceReady ? 1 : 0.76, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-[10.8ch] text-balance font-display text-[clamp(2.8rem,5vw,4.95rem)] leading-[0.92] text-white"
+            className="hero-title max-w-[10.6ch] text-balance font-display text-[clamp(2.5rem,4.7vw,4.7rem)] leading-[0.92] text-white"
           >
             Detect provider fraud earlier.
             <br />
@@ -52,7 +52,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 max-w-[33rem] text-pretty text-[0.98rem] leading-7 text-white/70 sm:text-base"
+            className="mt-4 max-w-[31rem] text-pretty text-[0.97rem] leading-7 text-white/70 sm:text-base"
           >
             Novo AI helps health insurers identify suspicious provider billing
             patterns, reduce claims leakage, and turn fragmented claim
@@ -63,7 +63,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 space-y-4"
+            className="mt-6 space-y-3"
           >
             {[
               "Surface fraudulent billing and documentation patterns",
@@ -86,7 +86,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
                     />
                   </svg>
                 </span>
-                <p className="max-w-[32rem] text-[0.98rem] leading-7 text-white/76 sm:text-base">
+                <p className="max-w-[31rem] text-[0.96rem] leading-6 text-white/76 sm:text-base sm:leading-7">
                   {item}
                 </p>
               </div>
@@ -97,7 +97,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-7 flex flex-col gap-4 sm:flex-row"
           >
             <Link
               href="#contact"
@@ -111,7 +111,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
 
           <motion.div
             style={{ opacity: railOpacity }}
-            className="mt-10 flex flex-wrap gap-3"
+            className="hero-signal-rail mt-6 hidden flex-wrap gap-3 xl:flex"
           >
             {heroSignals.map((signal) => (
               <span

@@ -7,8 +7,8 @@ import { cn } from "@/lib/cn";
 
 const navigationItems = [
   { href: "#partners", label: "Partners" },
-  { href: "#platform", label: "AI Platform" },
-  { href: "#insurance", label: "Insurance" },
+  { href: "#platform", label: "Fraud Detection" },
+  { href: "#workflow", label: "Provider Intelligence" },
   { href: "#contact", label: "Let's Talk" }
 ];
 

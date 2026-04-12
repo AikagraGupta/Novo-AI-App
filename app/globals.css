@@ -213,3 +213,27 @@ button:focus-visible {
     text-wrap: pretty;
   }
 }
+
+@media (max-height: 860px) {
+  .hero-copy-frame {
+    max-width: 30rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 4.2vw, 4.1rem);
+  }
+
+  .hero-signal-rail {
+    display: none;
+  }
+}
+
+@media (max-height: 760px) {
+  .hero-copy-frame {
+    max-width: 28rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 3.8vw, 3.55rem);
+  }
+}

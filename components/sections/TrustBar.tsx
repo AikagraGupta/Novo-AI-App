@@ -53,13 +53,13 @@ export function TrustBar() {
         <motion.div variants={fadeUp} className="max-w-xl">
           <p className="section-label">Trusted Partners</p>
           <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-[3.8rem]">
-            Backed by operators, investors, and institutions shaping the next era
+            Backed by operators, investors, and institutions close to the future
             of insurance.
           </h2>
           <p className="mt-5 max-w-lg text-base leading-7 text-white/64 sm:text-lg">
-            Novo AI sits inside a serious network of insurance and financial
-            ecosystem partners. The section should read like quiet credibility,
-            not a logo dump.
+            A credible claims-integrity story needs credible context. These
+            partners signal that Novo AI is being built inside the insurance and
+            financial ecosystem, not outside it.
           </p>
         </motion.div>
 

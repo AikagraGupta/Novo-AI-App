@@ -6,22 +6,22 @@ import { fadeUp, revealContainer } from "@/lib/motion";
 
 const caseStudyCards = [
   {
-    title: "Commercial auto carrier",
+    title: "Provider billing review",
     scenario:
-      "Used structured document extraction and anomaly ranking to give adjusters a cleaner first look at complex claim files.",
-    role: "Claims operations leadership"
+      "Flag repeated upcoding, unbundling, inflated billing, and documentation gaps across related claims before leakage becomes normalized.",
+    role: "Claims integrity and SIU"
   },
   {
-    title: "Specialty MGA",
+    title: "High-cost inpatient claims",
     scenario:
-      "Brought wording, endorsements, correspondence, and supporting evidence into one explainable review layer before escalation.",
-    role: "Coverage and underwriting operations"
+      "Bring invoices, discharge notes, treatment records, and correspondence into one review layer when cost spikes or length-of-stay patterns need closer scrutiny.",
+    role: "Medical claims and utilization review"
   },
   {
-    title: "TPA workflow team",
+    title: "Provider portfolio oversight",
     scenario:
-      "Reframed manual file review into governed summaries with clear evidence lineage from intake through resolution.",
-    role: "Shared services and service delivery"
+      "Track which providers, procedures, and claim cohorts repeatedly surface suspicious patterns so leadership can respond with better controls.",
+    role: "Claims leadership and provider management"
   }
 ];
 
@@ -37,14 +37,15 @@ export function CaseStudies() {
       className="section-shell"
     >
       <motion.div variants={fadeUp} className="mb-12 max-w-3xl">
-        <p className="section-label">Deployment patterns</p>
+        <p className="section-label">Use cases</p>
         <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-          Premium proof does not need noise.
+          The strongest story is where claims integrity teams feel leverage
+          first.
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-7 text-white/64 sm:text-lg">
-          Instead of a carousel of inflated testimonials, the section stays sparse
-          and scenario-led. It shows where Novo AI fits and what changes in the
-          work once it is in the loop.
+          Instead of generic vertical claims, the site should show the highest
+          urgency operating scenarios where earlier provider fraud signals
+          create real commercial value.
         </p>
       </motion.div>
 
@@ -64,7 +65,7 @@ export function CaseStudies() {
               {card.scenario}
             </p>
             <div className="mt-10 border-t border-white/10 pt-5 text-[11px] uppercase tracking-[0.28em] text-white/40">
-              Example operating scenario
+              Example claims-integrity workflow
             </div>
           </motion.article>
         ))}

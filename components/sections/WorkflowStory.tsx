@@ -7,33 +7,33 @@ import { fadeUp, revealContainer } from "@/lib/motion";
 const workflowSteps = [
   {
     step: "01",
-    title: "Ingest the operational record",
+    title: "Ingest provider and claim evidence",
     description:
-      "Bring in claims packs, policy wording, emails, forms, invoices, and prior notes without forcing teams to normalize everything first."
+      "Bring together invoices, itemized bills, treatment notes, discharge summaries, referral letters, and claim correspondence."
   },
   {
     step: "02",
-    title: "Extract and structure evidence",
+    title: "Structure billing and clinical signals",
     description:
-      "Pull the key entities, dates, monetary signals, and coverage references that matter across the file."
+      "Extract codes, providers, procedures, dates, costs, and documentation gaps so claims can be compared consistently."
   },
   {
     step: "03",
-    title: "Detect anomalies and leakage risk",
+    title: "Detect repeated suspicious patterns",
     description:
-      "Flag inconsistencies, suspicious patterns, and missing support before they become claim cost or customer friction."
+      "Surface upcoding, unbundling, excessive utilization, inflated billing, and weak documentation across related claims and providers."
   },
   {
     step: "04",
-    title: "Generate reasoning and next actions",
+    title: "Prioritize the right cases",
     description:
-      "Turn raw evidence into structured summaries, recommended actions, and clear internal reasoning."
+      "Give investigators and claims leaders ranked alerts, concise summaries, and evidence trails instead of raw document piles."
   },
   {
     step: "05",
-    title: "Surface insight to the business",
+    title: "Build provider-level intelligence",
     description:
-      "Feed operations, claims leadership, and customer-facing teams a view they can act on immediately."
+      "Turn case-level findings into broader provider oversight, portfolio visibility, and earlier intervention."
   }
 ];
 
@@ -50,14 +50,14 @@ export function WorkflowStory() {
     >
       <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
         <motion.div variants={fadeUp} className="max-w-xl">
-          <p className="section-label">Workflow story</p>
+          <p className="section-label">Provider intelligence workflow</p>
           <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-            From raw insurance documents to reasoned action.
+            From fragmented claim files to provider-level fraud signals.
           </h2>
           <p className="mt-5 text-base leading-7 text-white/64 sm:text-lg">
-            The platform narrative should read like a calm operating sequence,
-            not a feature dump. Each stage tightens clarity and shortens the
-            distance between evidence and decision.
+            Novo AI should read like a disciplined claims-integrity workflow:
+            ingest evidence, structure it, surface repeated suspicious
+            behaviour, and route teams toward action.
           </p>
         </motion.div>
 

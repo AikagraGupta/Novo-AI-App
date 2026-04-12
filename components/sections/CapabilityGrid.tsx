@@ -88,44 +88,44 @@ function BrainCircuitIcon(props: IconProps) {
 
 const capabilityCards = [
   {
-    title: "Streamline Claims Processing",
+    title: "Screen Claim Files",
     description:
-      "Our AI efficiently extracts and analyzes data from claim documents, whether that's hospital invoices, police reports, or legal correspondence.",
+      "Read hospital invoices, itemized bills, treatment notes, discharge summaries, and correspondence without relying on manual triage alone.",
     span: "lg:col-span-7",
     icon: DocumentPulseIcon
   },
   {
-    title: "Detect Fraud & Abuse",
+    title: "Detect Fraud Signals",
     description:
-      "Screen 100% of documents for potential fraud and abuse, reducing claim leakage and improving loss ratios.",
+      "Surface upcoding, unbundling, inflated billing, medically unnecessary services, and weak documentation before leakage compounds.",
     span: "lg:col-span-5",
     icon: ShieldSearchIcon
   },
   {
-    title: "Generate Actionable Insights",
+    title: "Build Provider Intelligence",
     description:
-      "Use AI to monitor and analyze price trends, identifying what drives costs in your offerings and where to optimize pricing strategies.",
+      "Connect repeated signals across providers, treatments, and claim types so suspicious behaviour is visible as a pattern, not an isolated case.",
     span: "lg:col-span-4",
     icon: ChartPulseIcon
   },
   {
-    title: "Improve Customer Satisfaction",
+    title: "Prioritize Investigations",
     description:
-      "Equip your customer support with AI-driven tools to quickly and accurately explain coverage decisions to customers.",
+      "Give claims integrity and SIU teams ranked cases, clearer evidence, and faster routes into targeted review.",
     span: "lg:col-span-4",
     icon: MessageSparkIcon
   },
   {
-    title: "End-to-End Automation",
+    title: "Explain Suspicious Claims",
     description:
-      "Bring ingestion, extraction, screening, summarization, and explanation into one controlled operating layer for insurance teams.",
+      "Turn dense claim evidence into concise summaries that help internal stakeholders challenge questionable billing with more confidence.",
     span: "lg:col-span-4",
     icon: WorkflowOrbitIcon
   },
   {
-    title: "Insurance Intelligence",
+    title: "Strengthen Claims Control",
     description:
-      "Turn dense insurance text into structured operational insight that helps teams move faster and make better decisions.",
+      "Feed operations leaders a more systematic view of provider risk, portfolio leakage, and where intervention matters most.",
     span: "lg:col-span-12",
     icon: BrainCircuitIcon
   }
@@ -143,14 +143,15 @@ export function CapabilityGrid() {
       className="section-shell"
     >
       <motion.div variants={fadeUp} className="mb-12 max-w-3xl">
-        <p className="section-label">AI Platform</p>
+        <p className="section-label">Fraud Detection</p>
         <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-          End-to-End Automation for Insurance
+          Fraud detection, provider intelligence, and claims control in one
+          operating layer.
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-7 text-white/66 sm:text-lg">
-          Novo AI brings document reading, analysis, and explanation into one
-          platform so insurance teams can streamline operations, maximize
-          insights, and improve combined ratios.
+          Novo AI helps health insurers move from reactive claim review to
+          earlier fraud detection by screening documents at scale, surfacing
+          suspicious provider behaviour, and organizing evidence for action.
         </p>
       </motion.div>
 

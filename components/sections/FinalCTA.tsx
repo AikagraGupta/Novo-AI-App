@@ -24,13 +24,14 @@ export function FinalCTA() {
           style={{ backgroundImage: "url('/sequence-hand/ezgif-frame-097.jpg')" }}
         />
         <div className="relative mx-auto max-w-3xl text-center">
-          <p className="copy-kicker mb-6">Final call to action</p>
+          <p className="copy-kicker mb-6">Book a demo</p>
           <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-            Let&apos;s Talk
+            See how Novo AI helps teams spot provider fraud sooner.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/66 sm:text-lg">
-            See how Novo AI can help your team streamline operations, maximize
-            insights, and improve combined ratios across insurance workflows.
+            We can walk through how fragmented claim files become earlier fraud
+            signals, clearer provider intelligence, and stronger claims
+            control.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
@@ -40,16 +41,16 @@ export function FinalCTA() {
               data-cursor-tone="crimson"
               className="interactive-pill inline-flex items-center justify-center rounded-full border border-[#ff8b98]/20 bg-[#ff5a6b] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-white shadow-[0_0_36px_rgba(255,90,107,0.22)]"
             >
-              Let&apos;s Talk
+              Book a Demo
             </Link>
             <Link
-              href="#platform"
+              href="#workflow"
               data-cursor="cta"
-              data-cursor-label="Platform"
+              data-cursor-label="Workflow"
               data-cursor-tone="white"
               className="interactive-pill inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.05] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-white/78 backdrop-blur-xl"
             >
-              AI Platform
+              View the Workflow
             </Link>
           </div>
         </div>

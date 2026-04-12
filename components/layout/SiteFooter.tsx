@@ -5,14 +5,14 @@ const footerColumns = [
     title: "Product",
     links: [
       { href: "#partners", label: "Partners" },
-      { href: "#platform", label: "AI Platform" },
-      { href: "#insurance", label: "Insurance" }
+      { href: "#platform", label: "Fraud Detection" },
+      { href: "#insurance", label: "Claims Integrity" }
     ]
   },
   {
     title: "Company",
     links: [
-      { href: "#workflow", label: "Workflow" },
+      { href: "#workflow", label: "Provider Intelligence" },
       { href: "#outcomes", label: "Outcomes" },
       { href: "#contact", label: "Let's Talk" }
     ]
@@ -27,10 +27,11 @@ export function SiteFooter() {
         <div className="space-y-5">
           <p className="copy-kicker">Novo AI</p>
           <h2 className="max-w-md font-display text-3xl text-white sm:text-4xl">
-            Transforming Insurance, One Claim at a Time
+            Earlier fraud signals. Stronger provider oversight.
           </h2>
           <p className="max-w-lg text-sm leading-7 text-white/60">
-            Streamline operations. Maximize insights. Improve combined ratios.
+            Move from manual, reactive review toward more systematic claims
+            integrity and tighter leakage control.
           </p>
         </div>
 
@@ -86,8 +87,8 @@ export function SiteFooter() {
       </div>
       <div className="quiet-divider" />
       <div className="flex flex-col gap-4 py-6 text-[11px] uppercase tracking-[0.28em] text-white/35 sm:flex-row sm:items-center sm:justify-between">
-        <span>Copyright © 2026 Novo AI. All rights reserved.</span>
-        <span>Sequence-first experience powered by real hand frames</span>
+        <span>Copyright {"\u00A9"} 2026 Novo AI. All rights reserved.</span>
+        <span>Built around provider fraud detection and claims integrity</span>
       </div>
     </footer>
   );

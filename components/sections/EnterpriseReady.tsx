@@ -6,20 +6,20 @@ import { fadeUp, revealContainer } from "@/lib/motion";
 
 const enterprisePoints = [
   {
-    title: "Read",
-    body: "Read policy documents, claims files, invoices, legal correspondence, and customer communications without forcing teams into manual review loops."
+    title: "Pattern detection",
+    body: "Spot repeated suspicious billing and documentation behaviour across providers, not just isolated claim anomalies."
   },
   {
-    title: "Analyze",
-    body: "Analyze complex insurance text to surface relevant evidence, exceptions, pricing signals, fraud indicators, and operational next steps."
+    title: "Evidence structure",
+    body: "Turn fragmented claim documents into comparable provider, treatment, and claim-level signals that teams can actually use."
   },
   {
-    title: "Explain",
-    body: "Explain coverage decisions and claim reasoning in clearer language so both internal teams and customers understand the basis for action."
+    title: "Auditability",
+    body: "Keep source-linked summaries and reasoning trails so escalations, reviews, and challenges are easier to defend."
   },
   {
-    title: "Operationalize",
-    body: "Apply these capabilities across claims processing and customer support workflows that were traditionally handled by humans."
+    title: "Operational fit",
+    body: "Support claims integrity, SIU, medical review, and operations teams without forcing a full workflow rebuild."
   }
 ];
 
@@ -36,16 +36,15 @@ export function EnterpriseReady() {
     >
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <motion.div variants={fadeUp} className="max-w-xl">
-          <p className="section-label">Insurance</p>
+          <p className="section-label">Claims integrity</p>
           <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-            How is GenAI revolutionizing the insurance industry?
+            Claims integrity gets stronger when fraud signals are systematic.
           </h2>
           <p className="mt-5 text-base leading-7 text-white/64 sm:text-lg">
-            Generative AI and Large Language Models are revolutionizing the
-            insurance industry by granting the ability to read, analyze, and
-            explain text documents. Novo AI brings these capabilities to
-            insurance teams, streamlining workflows like claims processing and
-            customer support.
+            Novo AI should feel like more than document automation. The real
+            differentiator is earlier fraud detection, clearer provider
+            intelligence, and stronger operational control across the claims
+            function.
           </p>
         </motion.div>
 

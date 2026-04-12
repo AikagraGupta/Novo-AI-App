@@ -9,10 +9,10 @@ type HeroCopyProps = {
 };
 
 const heroSignals = [
-  "Partners",
-  "AI Platform",
-  "Insurance",
-  "Trusted Partners"
+  "Provider fraud",
+  "Pattern detection",
+  "Claims leakage",
+  "Provider intelligence"
 ];
 
 export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
@@ -33,7 +33,7 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="copy-kicker mb-6"
           >
-            Novo AI for insurance operations
+            Novo AI for health insurance claims
           </motion.p>
 
           <motion.h1
@@ -41,63 +41,71 @@ export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: sequenceReady ? 1 : 0.76, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-[10.5ch] text-balance font-display text-[clamp(2.9rem,5.3vw,5.1rem)] leading-[0.92] text-white"
+            className="max-w-[10.8ch] text-balance font-display text-[clamp(2.8rem,5vw,4.95rem)] leading-[0.92] text-white"
           >
-            Transforming Insurance, One Claim at a Time
+            Detect provider fraud earlier.
+            <br />
+            Strengthen claims control at scale.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-5 max-w-[30rem] text-pretty text-[0.98rem] leading-7 text-white/70 sm:text-base"
+            className="mt-5 max-w-[33rem] text-pretty text-[0.98rem] leading-7 text-white/70 sm:text-base"
           >
-            Streamline operations. Maximize insights. Improve combined ratios.
+            Novo AI helps health insurers identify suspicious provider billing
+            patterns, reduce claims leakage, and turn fragmented claim
+            documents into actionable provider intelligence.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-10 flex max-w-[34rem] flex-col gap-4 sm:flex-row"
+            className="mt-8 space-y-4"
           >
-            <label
-              data-cursor="input"
-              data-cursor-tone="crimson"
-              className="interactive-input flex min-w-0 flex-1 items-center rounded-full border border-white/12 bg-white/[0.05] px-5 py-3 backdrop-blur-xl"
-            >
-              <span className="sr-only">Email address</span>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full bg-transparent text-sm text-white placeholder:text-white/38 focus:outline-none"
-              />
-            </label>
+            {[
+              "Surface fraudulent billing and documentation patterns",
+              "Scale pattern detection at the provider level",
+              "Strengthen operational readiness across the claims function"
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#8de6f5]/28 bg-[#8de6f5]/6 text-[#a9f3ff]">
+                  <svg
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className="h-3.5 w-3.5"
+                  >
+                    <path
+                      d="m4.5 10.25 3.25 3.25L15.5 5.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <p className="max-w-[32rem] text-[0.98rem] leading-7 text-white/76 sm:text-base">
+                  {item}
+                </p>
+              </div>
+            ))}
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 flex flex-col gap-4 sm:flex-row"
+            className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
             <Link
               href="#contact"
               data-cursor="cta"
-              data-cursor-label="Talk"
-              data-cursor-tone="crimson"
-              className="interactive-pill relative z-10 inline-flex items-center justify-center rounded-full border border-[#ff8b98]/20 bg-[#ff5a6b] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-white shadow-[0_0_40px_rgba(255,90,107,0.24)] transition-transform duration-300 hover:-translate-y-0.5"
-            >
-              Let&apos;s Talk
-            </Link>
-            <Link
-              href="#platform"
-              data-cursor="cta"
-              data-cursor-label="Demo"
               data-cursor-tone="white"
-              className="interactive-pill relative z-10 inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.05] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.28em] text-white/78 backdrop-blur-xl transition-colors duration-300 hover:text-white"
+              className="interactive-pill relative z-10 inline-flex items-center justify-center rounded-full border border-[#8de6f5]/30 bg-[#1f4f5b] px-7 py-3.5 text-[11px] font-medium uppercase tracking-[0.28em] text-white shadow-[0_0_40px_rgba(141,230,245,0.14)] transition-transform duration-300 hover:-translate-y-0.5"
             >
-              Watch Demo
+              Book a Demo
             </Link>
           </motion.div>
 

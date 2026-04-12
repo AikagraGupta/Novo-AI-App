@@ -12,7 +12,11 @@ function ClockBoltIcon(props: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
       <circle cx="12" cy="12" r="8.25" />
       <path d="M12 7.75v4.1l2.65 1.55" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="m17.15 5.6-.55 1.4-1.4.55 1.4.55.55 1.45.55-1.45 1.45-.55-1.45-.55-.55-1.4Z" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="m17.15 5.6-.55 1.4-1.4.55 1.4.55.55 1.45.55-1.45 1.45-.55-1.45-.55-.55-1.4Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -22,7 +26,11 @@ function FileCheckIcon(props: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
       <path d="M8 3.75h6.5L19.25 8.5V18A2.25 2.25 0 0 1 17 20.25H8A2.25 2.25 0 0 1 5.75 18V6A2.25 2.25 0 0 1 8 3.75Z" />
       <path d="M14 3.75V8.5h4.75" />
-      <path d="m8.9 13.15 1.8 1.8 4.35-4.35" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="m8.9 13.15 1.8 1.8 4.35-4.35"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -62,28 +70,28 @@ function MessageClarityIcon(props: IconProps) {
 
 const outcomeMetrics = [
   {
-    value: "Hours to minutes",
-    label: "Faster first-pass review",
+    value: "Earlier fraud signals",
+    label: "before suspicious behaviour compounds",
     icon: ClockBoltIcon
   },
   {
-    value: "Clear source lineage",
-    label: "Explainable decision support",
+    value: "Provider-level visibility",
+    label: "beyond one-off claim review",
     icon: FileCheckIcon
   },
   {
-    value: "Earlier anomaly visibility",
-    label: "Leakage and fraud control",
+    value: "Clear evidence trails",
+    label: "for escalations and challenge",
     icon: RadarAlertIcon
   },
   {
-    value: "Less manual rework",
-    label: "Higher throughput across teams",
+    value: "Less manual triage",
+    label: "for overloaded claims teams",
     icon: LayersSyncIcon
   },
   {
-    value: "Sharper customer language",
-    label: "Confident coverage communication",
+    value: "Sharper cost containment",
+    label: "through stronger leakage control",
     icon: MessageClarityIcon
   }
 ];
@@ -102,7 +110,8 @@ export function Outcomes() {
       <motion.div variants={fadeUp} className="mb-12 max-w-2xl">
         <p className="section-label">Outcomes</p>
         <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-          Value shown in operating terms, not abstract AI promises.
+          The commercial outcome is stronger claims control, not just faster
+          processing.
         </h2>
       </motion.div>
 

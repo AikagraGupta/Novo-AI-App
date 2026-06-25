@@ -1,130 +1,80 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { motion, useTransform, type MotionValue } from "framer-motion";
 
-type HeroCopyProps = {
-  progress: MotionValue<number>;
-  sequenceReady: boolean;
-};
+import { CTA_TARGETS } from "@/lib/homepageContent";
 
-const heroSignals = [
-  "Provider fraud",
-  "Pattern detection",
-  "Claims leakage",
-  "Provider intelligence"
-];
-
-export function HeroCopy({ progress, sequenceReady }: HeroCopyProps) {
-  const copyY = useTransform(progress, [0, 1], ["0%", "-4%"]);
-  const copyOpacity = useTransform(progress, [0, 0.82, 1], [1, 0.96, 0.5]);
-  const railOpacity = useTransform(progress, [0, 0.22, 0.82], [0.48, 0.92, 0.4]);
-
+export function HeroCopy() {
   return (
-    <div className="absolute inset-0 z-20">
-      <div className="section-shell pointer-events-none grid h-full items-center pb-8 pt-24 sm:pb-10 sm:pt-28 lg:grid-cols-[minmax(0,32rem)_1fr] lg:pb-12 lg:pt-28">
-        <motion.div
-          style={{ y: copyY, opacity: copyOpacity }}
-          className="hero-copy-frame pointer-events-auto max-w-[32rem]"
+    <div className="section-shell grid min-h-[92svh] content-start items-start gap-8 !pt-28 pb-10 sm:min-h-[100svh] sm:gap-10 sm:!pt-28 sm:pb-14 lg:min-h-[88svh] lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] lg:content-center lg:items-center lg:gap-[4.5rem] lg:!pt-28 lg:pb-16 xl:gap-20">
+      <div className="min-w-0 max-w-[30rem]">
+        <h1
+          id="hero-heading"
+          className="max-w-[13ch] text-balance font-display text-[2.55rem] leading-[0.96] text-foreground sm:text-[3.4rem] lg:text-[3.8rem] lg:leading-[0.96] xl:text-[4.05rem]"
         >
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="copy-kicker mb-6"
-          >
-            Novo AI for health insurance claims
-          </motion.p>
+          Uncomplicate complex health claims with{" "}
+          evidence-ready review.
+        </h1>
 
-          <motion.h1
-            id="hero-heading"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: sequenceReady ? 1 : 0.76, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="hero-title max-w-[10.6ch] text-balance font-display text-[clamp(2.5rem,4.7vw,4.7rem)] leading-[0.92] text-white"
-          >
-            Detect provider fraud earlier.
-            <br />
-            Strengthen claims control at scale.
-          </motion.h1>
+        <p className="mt-5 max-w-[27rem] text-[0.98rem] leading-[1.6] text-muted sm:mt-6 sm:text-[1.03rem] sm:leading-[1.65]">
+          Turn messy claim evidence into structured review, medical coding, and
+          cost-control signals before payment.
+        </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.95, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 max-w-[31rem] text-pretty text-[0.97rem] leading-7 text-white/70 sm:text-base"
+        <div className="mt-7 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:items-center">
+          <Link
+            href={CTA_TARGETS.primary}
+            className="button-primary interactive-pill w-[calc(100vw-3rem)] max-w-full px-5 text-[0.62rem] tracking-[0.12em] sm:w-auto"
           >
-            Novo AI helps health insurers identify suspicious provider billing
-            patterns, reduce claims leakage, and turn fragmented claim
-            documents into actionable provider intelligence.
-          </motion.p>
+            Book a Demo
+          </Link>
+          <Link
+            href={CTA_TARGETS.sampleAnalysis}
+            className="button-secondary interactive-pill w-[calc(100vw-3rem)] max-w-full px-5 text-[0.62rem] tracking-[0.12em] sm:w-auto"
+          >
+            Let&apos;s Talk
+          </Link>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.95, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 space-y-3"
+        <div className="mt-4 flex flex-col items-start gap-x-3 gap-y-2 text-[0.84rem] text-foreground/54 sm:mt-5 sm:flex-row sm:flex-wrap sm:items-center sm:text-[0.88rem]">
+          <span>Prefer to understand the platform first?</span>
+          <Link
+            href={CTA_TARGETS.secondary}
+            className="interactive-pill rounded-full py-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-foreground transition-colors duration-300 hover:text-gold"
           >
-            {[
-              "Surface fraudulent billing and documentation patterns",
-              "Scale pattern detection at the provider level",
-              "Strengthen operational readiness across the claims function"
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <span className="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-[#8de6f5]/28 bg-[#8de6f5]/6 text-[#a9f3ff]">
-                  <svg
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    className="h-3.5 w-3.5"
-                  >
-                    <path
-                      d="m4.5 10.25 3.25 3.25L15.5 5.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <p className="max-w-[31rem] text-[0.96rem] leading-6 text-white/76 sm:text-base sm:leading-7">
-                  {item}
-                </p>
+            Explore Platform
+          </Link>
+        </div>
+      </div>
+
+      <div className="min-w-0 w-full max-w-full sm:w-full sm:max-w-[42rem] lg:max-w-[39rem] lg:justify-self-end xl:max-w-[41rem]">
+        <div className="product-window p-3 sm:p-4">
+          <div className="relative mt-9 aspect-[4/3] overflow-hidden rounded-[20px] border border-foreground/8 bg-[#eef3f8] sm:aspect-[16/9.7]">
+            <Image
+              src="/demos/claim-info.png"
+              alt="Novo claim review workspace showing the source claim file beside structured claim data."
+              fill
+              priority
+              sizes="(min-width: 1280px) 41rem, (min-width: 1024px) 39rem, 100vw"
+              className="scale-[1.1] object-cover object-[42%_18%] sm:scale-[1.2]"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,39,68,0.08),transparent_22%,transparent_78%,rgba(20,39,68,0.08)),radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.45),transparent_24%)]" />
+
+            <div className="absolute inset-x-3 bottom-3 max-w-[calc(100%-1.5rem)] rounded-[16px] border border-gold/18 bg-panel/92 px-4 py-3 backdrop-blur-sm sm:inset-x-auto sm:left-4 sm:min-w-[18rem]">
+              <p className="text-[0.64rem] font-semibold uppercase tracking-[0.16em] text-gold">
+                Evidence-ready review layer
+              </p>
+              <div className="mt-2 flex flex-wrap items-center gap-x-2.5 gap-y-2 text-[0.8rem] text-foreground/66">
+                <span>Automated extraction</span>
+                <span className="h-1 w-1 rounded-full bg-red/60" />
+                <span>Medical coding</span>
+                <span className="h-1 w-1 rounded-full bg-gold/70" />
+                <span>Cost-control signals</span>
               </div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.95, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-7 flex flex-col gap-4 sm:flex-row"
-          >
-            <Link
-              href="#contact"
-              data-cursor="cta"
-              data-cursor-tone="white"
-              className="interactive-pill relative z-10 inline-flex items-center justify-center rounded-full border border-[#8de6f5]/30 bg-[#1f4f5b] px-7 py-3.5 text-[11px] font-medium uppercase tracking-[0.28em] text-white shadow-[0_0_40px_rgba(141,230,245,0.14)] transition-transform duration-300 hover:-translate-y-0.5"
-            >
-              Book a Demo
-            </Link>
-          </motion.div>
-
-          <motion.div
-            style={{ opacity: railOpacity }}
-            className="hero-signal-rail mt-6 hidden flex-wrap gap-3 xl:flex"
-          >
-            {heroSignals.map((signal) => (
-              <span
-                key={signal}
-                data-cursor="card"
-                data-cursor-tone="muted"
-                className="interactive-pill rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] uppercase tracking-[0.26em] text-white/55 backdrop-blur-xl"
-              >
-                {signal}
-              </span>
-            ))}
-          </motion.div>
-        </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

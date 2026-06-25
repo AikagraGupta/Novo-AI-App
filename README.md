@@ -1,49 +1,48 @@
-﻿# Novo AI
+# Novo AI
 
-A premium Next.js landing page for Novo AI focused on provider fraud detection, claims integrity, and provider intelligence for health insurers.
+A polished Next.js marketing site for Novo AI, focused on health-insurance claims intelligence, document understanding, reviewer workflows, and provider-risk signals.
 
 ## Overview
 
-This site is built as a cinematic, high-trust marketing experience rather than a generic SaaS template. The homepage centers on a scroll-driven hero sequence and a tighter commercial narrative around:
+The site is a concise product-marketing experience, not a generic SaaS template. It centers on a balanced product hero, real workflow screenshots, partner credibility, proof points, practical FAQ content, and clear next steps for insurers evaluating Novo.
 
-- earlier provider fraud detection
-- claims leakage reduction
-- provider-level pattern detection
-- stronger claims control across the claims function
+## Active Routes
 
-## Experience Highlights
-
-- Scroll-scrubbed hero sequence using the hand image frames in `public/sequence-hand`
-- Premium dark visual system with restrained red glow accents
-- Smooth anchor navigation across the homepage
-- Responsive custom cursor and motion treatment for desktop
-- Partner logo wall and fraud-detection-focused section narrative
+- `/` - homepage narrative and conversion flow
+- `/platform` - platform overview and workflow coverage
+- `/about` - company context, market reach, and operating principles
+- `/resources` - media references, market notes, and external proof points
 
 ## Tech Stack
 
-- Next.js 14
+- Next.js 14 App Router
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- Lenis
 
 ## Local Development
 
 Install dependencies and start the dev server:
 
-```powershell
+```bash
 npm install
 npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+Then open `http://localhost:3000`.
 
 ## Production Build
 
 Run a local production build with:
 
-```powershell
+```bash
 npm run build
+```
+
+To test the built app locally:
+
+```bash
+npm run start
 ```
 
 ## Project Structure
@@ -52,36 +51,36 @@ npm run build
 app/
   layout.tsx
   page.tsx
-  globals.css
+  about/
+  platform/
 components/
   hero/
   layout/
-  providers/
   sections/
 hooks/
 lib/
 public/
+  brand/
+  demos/
   partners/
-  sequence-hand/
+  resources/
 ```
 
-## Asset Notes
+## Content And Assets
 
-- The homepage hero uses the hand rotation image sequence from `public/sequence-hand`
-- Partner logos live in `public/partners`
-- If the image sequence changes, keep filenames and `sequence.config.json` aligned with the actual frame set
+- Product copy and reusable data live in `lib/*Content.ts`
+- Demo screenshots live in `public/demos`
+- Brand and partner assets live in `public/brand` and `public/partners`
+- The active hero uses the product screenshot composition in `components/hero`
 
 ## Deployment
 
-This repository is connected to Vercel.
+The project is linked to Vercel as `novoai`.
 
-- Pushes to non-`main` branches create preview deployments
-- Pushes to `main` update production
+Useful commands:
 
-## Positioning Focus
-
-The current homepage direction is built around this message:
-
-> Detect provider fraud earlier. Strengthen claims control at scale.
-
-The rest of the site supports that story through fraud detection, provider intelligence, claims-integrity workflows, and outcomes tied to leakage control rather than generic AI messaging.
+```bash
+vercel pull --yes
+vercel build
+vercel deploy --prebuilt
+```

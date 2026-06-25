@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Novo AI media and resources card</title>
+  <desc id="desc">A neutral Novo AI resource graphic with document, signal, and review elements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="0.52" stop-color="#f5efe4"/>
+      <stop offset="1" stop-color="#eef2f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#142744" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.42" stroke="#dec99d" stroke-width="1">
+    <path d="M0 124h1200M0 218h1200M0 312h1200M0 406h1200M0 500h1200"/>
+    <path d="M134 0v675M282 0v675M430 0v675M578 0v675M726 0v675M874 0v675M1022 0v675"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="148" y="112" width="904" height="451" rx="38" fill="#fffdf8" stroke="#e5d7bd" stroke-width="2"/>
+    <rect x="148" y="112" width="904" height="78" rx="38" fill="#f7efe1"/>
+    <circle cx="206" cy="151" r="10" fill="#ef6b62"/>
+    <circle cx="240" cy="151" r="10" fill="#e7b94e"/>
+    <circle cx="274" cy="151" r="10" fill="#3fbf6b"/>
+  </g>
+  <g transform="translate(218 228)">
+    <rect width="255" height="238" rx="22" fill="#ffffff" stroke="#d9e1e8" stroke-width="2"/>
+    <rect x="34" y="36" width="150" height="12" rx="6" fill="#142744" opacity="0.28"/>
+    <rect x="34" y="72" width="190" height="10" rx="5" fill="#142744" opacity="0.14"/>
+    <rect x="34" y="99" width="174" height="10" rx="5" fill="#142744" opacity="0.14"/>
+    <rect x="34" y="126" width="196" height="10" rx="5" fill="#142744" opacity="0.14"/>
+    <rect x="34" y="171" width="88" height="38" rx="9" fill="#c1974a" opacity="0.22"/>
+  </g>
+  <g transform="translate(515 228)">
+    <rect width="255" height="238" rx="22" fill="#142744"/>
+    <path d="M54 162c36-58 70-84 103-78 31 5 51 33 71 78" fill="none" stroke="#f2dba8" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="62" cy="76" r="18" fill="#f2dba8"/>
+    <circle cx="130" cy="72" r="18" fill="#fffdf8"/>
+    <circle cx="198" cy="76" r="18" fill="#e06b5f"/>
+    <rect x="50" y="184" width="154" height="12" rx="6" fill="#fffdf8" opacity="0.72"/>
+  </g>
+  <g transform="translate(812 228)">
+    <rect width="170" height="238" rx="22" fill="#ffffff" stroke="#d9e1e8" stroke-width="2"/>
+    <rect x="35" y="36" width="100" height="100" rx="18" fill="#eff4f6"/>
+    <path d="M62 91l22 22 40-52" fill="none" stroke="#c1974a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="35" y="166" width="100" height="10" rx="5" fill="#142744" opacity="0.18"/>
+    <rect x="35" y="194" width="78" height="10" rx="5" fill="#142744" opacity="0.18"/>
+  </g>
+  <g transform="translate(218 72)">
+    <rect width="56" height="56" rx="16" fill="#142744"/>
+    <path d="M16 40V16h7l20 16V16h7v24h-7L23 24v16Z" fill="#fffdf8"/>
+    <text x="78" y="36" fill="#142744" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="8">NOVO AI</text>
+  </g>
+  <text x="218" y="606" fill="#c1974a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="7">MEDIA AND RESOURCES</text>
+</svg>

@@ -3,7 +3,7 @@ import type { Transition, Variants } from "framer-motion";
 export const premiumEase = [0.16, 1, 0.3, 1] as const;
 
 export const premiumTransition: Transition = {
-  duration: 0.8,
+  duration: 0.65,
   ease: premiumEase
 };
 
@@ -11,29 +11,27 @@ export const revealContainer: Variants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12
+      staggerChildren: 0.08
     }
   }
 };
 
 export const fadeUp: Variants = {
   hidden: {
-    opacity: 0,
-    y: 28,
-    filter: "blur(10px)"
+    opacity: 0.72,
+    y: 10
   },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: premiumTransition
   }
 };
 
 export const softReveal: Variants = {
   hidden: {
-    opacity: 0,
-    scale: 0.985
+    opacity: 0.82,
+    scale: 0.992
   },
   show: {
     opacity: 1,

@@ -1,9 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { cn } from "@/lib/cn";
-import { fadeUp, revealContainer } from "@/lib/motion";
 
 const partners = [
   {
@@ -40,51 +35,41 @@ const partners = [
 
 export function TrustBar() {
   return (
-    <motion.section
+    <section
       id="partners"
-      data-cursor-tone="white"
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.28 }}
-      variants={revealContainer}
-      className="section-shell pt-12 lg:pt-18"
+      className="section-shell py-8 lg:py-10"
     >
-      <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end lg:gap-14">
-        <motion.div variants={fadeUp} className="max-w-xl">
-          <p className="section-label">Trusted Partners</p>
-          <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-[3.8rem]">
-            Backed by operators, investors, and institutions close to the future
-            of insurance.
-          </h2>
-          <p className="mt-5 max-w-lg text-base leading-7 text-white/64 sm:text-lg">
-            A credible claims-integrity story needs credible context. These
-            partners signal that Novo AI is being built inside the insurance and
-            financial ecosystem, not outside it.
-          </p>
-        </motion.div>
+      <div className="partner-wall px-5 py-5 sm:px-6">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-[28rem]">
+            <p className="copy-kicker">Past clients and partners</p>
+            <p className="mt-2 text-sm leading-6 text-foreground/62 sm:text-base">
+              Referenced by insurers, operators, investors, and ecosystem
+              partners.
+            </p>
+          </div>
 
-        <motion.div variants={fadeUp} className="partner-wall p-4 sm:p-5">
-          <div className="grid gap-4 lg:grid-cols-12">
+          <div className="grid gap-3 sm:grid-cols-2 lg:flex-1 lg:grid-cols-5">
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                data-cursor="card"
-                data-cursor-tone="white"
                 className={cn(
-                  "partner-tile flex min-h-[148px] items-center justify-center px-8 py-10 sm:min-h-[164px]",
-                  partner.span
+                  "partner-tile min-h-[68px] px-4 py-4 sm:min-h-[76px]",
+                  partner.name === "discovermarket" || partner.name === "Singapore FinTech Association"
+                    ? "lg:col-span-1"
+                    : ""
                 )}
               >
                 <img
                   src={partner.src}
                   alt={partner.name}
-                  className={partner.logoClassName}
+                  className={cn(partner.logoClassName, "max-w-full opacity-88")}
                 />
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

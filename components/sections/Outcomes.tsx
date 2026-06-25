@@ -1,143 +1,86 @@
-"use client";
+import {
+  PROOF_METRICS,
+  TESTIMONIAL_SLOTS
+} from "@/lib/homepageContent";
 
-import type { SVGProps } from "react";
-import { motion } from "framer-motion";
+type OutcomesProps = {
+  showTestimonials?: boolean;
+};
 
-import { fadeUp, revealContainer } from "@/lib/motion";
-
-type IconProps = SVGProps<SVGSVGElement>;
-
-function ClockBoltIcon(props: IconProps) {
+export function Outcomes({ showTestimonials = true }: OutcomesProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
-      <circle cx="12" cy="12" r="8.25" />
-      <path d="M12 7.75v4.1l2.65 1.55" strokeLinecap="round" strokeLinejoin="round" />
-      <path
-        d="m17.15 5.6-.55 1.4-1.4.55 1.4.55.55 1.45.55-1.45 1.45-.55-1.45-.55-.55-1.4Z"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function FileCheckIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
-      <path d="M8 3.75h6.5L19.25 8.5V18A2.25 2.25 0 0 1 17 20.25H8A2.25 2.25 0 0 1 5.75 18V6A2.25 2.25 0 0 1 8 3.75Z" />
-      <path d="M14 3.75V8.5h4.75" />
-      <path
-        d="m8.9 13.15 1.8 1.8 4.35-4.35"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function RadarAlertIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
-      <path d="M12 12 18.25 5.75" strokeLinecap="round" />
-      <circle cx="12" cy="12" r="1.75" />
-      <path d="M7.1 16.9a6.8 6.8 0 0 1 0-9.8" strokeLinecap="round" />
-      <path d="M16.9 16.9a6.8 6.8 0 0 0 0-9.8" strokeLinecap="round" />
-      <path d="M4.2 19.8a10.9 10.9 0 0 1 0-15.6" strokeLinecap="round" />
-      <path d="M19.8 19.8a10.9 10.9 0 0 0 0-15.6" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function LayersSyncIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
-      <path d="m12 4 7.25 4L12 12 4.75 8 12 4Z" />
-      <path d="m4.75 12 7.25 4 7.25-4" />
-      <path d="m4.75 16 7.25 4 7.25-4" />
-    </svg>
-  );
-}
-
-function MessageClarityIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" {...props}>
-      <path d="M5.75 6.25h12.5A1.75 1.75 0 0 1 20 8v7a1.75 1.75 0 0 1-1.75 1.75H10l-4.25 3v-3H5.75A1.75 1.75 0 0 1 4 15V8a1.75 1.75 0 0 1 1.75-1.75Z" />
-      <path d="M8 10.25h8" strokeLinecap="round" />
-      <path d="M8 13.25h5.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-const outcomeMetrics = [
-  {
-    value: "Earlier fraud signals",
-    label: "before suspicious behaviour compounds",
-    icon: ClockBoltIcon
-  },
-  {
-    value: "Provider-level visibility",
-    label: "beyond one-off claim review",
-    icon: FileCheckIcon
-  },
-  {
-    value: "Clear evidence trails",
-    label: "for escalations and challenge",
-    icon: RadarAlertIcon
-  },
-  {
-    value: "Less manual triage",
-    label: "for overloaded claims teams",
-    icon: LayersSyncIcon
-  },
-  {
-    value: "Sharper cost containment",
-    label: "through stronger leakage control",
-    icon: MessageClarityIcon
-  }
-];
-
-export function Outcomes() {
-  return (
-    <motion.section
-      id="outcomes"
-      data-cursor-tone="white"
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={revealContainer}
-      className="section-shell"
+    <section
+      id="proof"
+      className="relative my-8 overflow-hidden bg-navy py-14 sm:my-12 sm:py-24"
     >
-      <motion.div variants={fadeUp} className="mb-12 max-w-2xl">
-        <p className="section-label">Outcomes</p>
-        <h2 className="text-balance font-display text-4xl text-white sm:text-5xl lg:text-6xl">
-          The commercial outcome is stronger claims control, not just faster
-          processing.
-        </h2>
-      </motion.div>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(181,138,69,0.22),transparent_26%),radial-gradient(circle_at_84%_24%,rgba(179,72,82,0.16),transparent_22%)]" />
 
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-        {outcomeMetrics.map((metric) => (
-          <motion.article
-            key={metric.label}
-            variants={fadeUp}
-            data-cursor="card"
-            data-cursor-tone="white"
-            className="glass-panel interactive-card flex min-h-[220px] flex-col justify-between p-6 sm:p-8"
-          >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] text-white/84 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_14px_34px_rgba(0,0,0,0.2)]">
-              <metric.icon className="h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-balance font-display text-3xl leading-none text-white sm:text-[2.5rem]">
+      <div className="section-shell !py-0">
+        <div className="mb-7 max-w-4xl sm:mb-12">
+          <p className="section-label text-gold">Results / proof</p>
+          <h2 className="max-w-[14ch] text-balance font-display text-[2.35rem] leading-[0.98] text-white sm:text-5xl lg:text-[3.95rem] lg:leading-[0.96]">
+            Where insurers gain on every claim.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-4 xl:grid-cols-5">
+          {PROOF_METRICS.map((metric) => (
+            <article
+              key={metric.label}
+              className="flex min-h-[8rem] flex-col justify-between rounded-[18px] border border-white/10 bg-white/[0.07] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:min-h-[11rem] sm:rounded-[22px] sm:p-6"
+            >
+              <h3 className="font-display text-[2.15rem] leading-[0.9] text-white sm:text-[3.25rem] xl:text-[3.9rem]">
                 {metric.value}
               </h3>
-              <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-white/45">
+              <p className="pt-4 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-white/[0.62] sm:pt-5 sm:text-[0.72rem] sm:tracking-[0.14em]">
                 {metric.label}
               </p>
-            </div>
-          </motion.article>
-        ))}
+            </article>
+          ))}
+        </div>
+
+        {showTestimonials ? (
+        <div id="testimonials" className="mt-12 sm:mt-20 lg:mt-24">
+          <div className="mb-6 max-w-3xl">
+            <p className="section-label text-gold">Testimonials</p>
+            <h3 className="max-w-[16ch] text-balance font-display text-[2.25rem] leading-[0.98] text-white sm:text-[2.9rem]">
+              What the teams using Novo say.
+            </h3>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            {TESTIMONIAL_SLOTS.map((item) => (
+              <article
+                key={item.company}
+                className="flex h-full flex-col rounded-[22px] border border-white/[0.14] bg-white/[0.09] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] lg:p-7"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="grid h-16 w-16 shrink-0 place-items-center rounded-[18px] border border-white/28 bg-white text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-navy shadow-[0_14px_34px_rgba(0,0,0,0.12)] sm:h-[4.75rem] sm:w-[4.75rem]">
+                    {item.mark}
+                  </div>
+
+                  <div className="min-w-0 pt-1">
+                    <p className="copy-kicker">{item.company}</p>
+                    <p className="mt-2 text-[1rem] leading-6 text-white/[0.94]">
+                      {item.person}
+                    </p>
+                  </div>
+                </div>
+
+                <blockquote className="mt-5 text-[1.02rem] leading-7 text-white/[0.82] sm:text-[1.1rem]">
+                  {item.summary}
+                </blockquote>
+                <div className="mt-auto pt-6">
+                  <p className="text-[0.88rem] leading-6 text-white/[0.62]">
+                    {item.role}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ) : null}
       </div>
-    </motion.section>
+    </section>
   );
 }

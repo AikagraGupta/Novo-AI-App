@@ -3,3 +3,10 @@ node_modules
 dist
 coverage
 *.log
+.env*.local
+.vercel
+.codex-artifacts
+.codex-logs
+.tools
+tmp
+tsconfig.tsbuildinfo

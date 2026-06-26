@@ -1,6 +1,7 @@
 import { FAQ_ITEMS } from "@/lib/homepageContent";
+import { getSiteUrl } from "@/lib/siteConfig";
 
-const SITE_URL = "https://heynovo.ai";
+const SITE_URL = getSiteUrl();
 
 export function getHomepageStructuredData() {
   return [
